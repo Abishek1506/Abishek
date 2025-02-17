@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8d906e2cd1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="main-container">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <div class="circle four"></div>
+                </div>
+                <ul id="sidemenu">
+                    <li class="blue"><a href ="#header">Home</a></li>
+                    <li><a href ="#about">About</a></li>
+                    <li><a href ="#skills">Skills</a></li>
+                    <li><a href ="#certifications">Certifications</a></li>
+                    <li><a href ="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I'm <br><span class="spcolor">Abishek <span class="sphide">Amirthavarshan </span>S</span></h1>
+                <p>I'm a Programmer with knowledge over building Interactive Web Applications and Mobile Applications.</p>
+                <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abishek-amirthavarshan/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/abishek_sa_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Abishek1506"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100078013660275"><i class="fa-brands fa-facebook"></i></a> 
+                </div>
+            </div>
+                <a href="AbishekCV-3.pdf" download class="btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="about-col">
+                <h1 class="sub-title">About Me</h1>
+                <p>Motivated final-year BCA student seeking an entry-level role to apply and expand my foundational knowledge in
+                programming. Eager to learn and contribute to projects in a dynamic environment. Ready to grow and develop my skills as
+                a fresher in the tech industry.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('softskills')">Soft Skills</p>
+                    <p class="tab-links"onclick="opentab('hobbies')">Hobbies</p>   
+                </div>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+                <ul class="mine">
+                    <li><span>SRI MUTHUKUMARAN ARTS & SCIENCE COLLEGE</span><br>
+                    BCA<br>
+                    Chennai, Tamil Nadu<br>
+                    Oct 2022 - Present<br>
+                    PERCENTAGE: 63.18<br>
+                    Expected Graduation: 2025<br></li>
+                    <li><span>ST ANN'S MATRIC HR.SEC</span><br>
+                    HSC - 2021<br>Chennai, Tamil Nadu<br>
+                    PERCENTAGE: 90.5<br></li>
+                    <li><span>ST ANN'S MATRIC HR.SEC</span><br>
+                    SSLC - 2019<br>Chennai, Tamil Nadu<br>
+                    PERCENTAGE: 90.8</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="softskills">
+                <ul class="mine">
+                    <li><span>Adaptablility & Reliability</span></li>
+                    <li><span>Teamwork & Collaboration</span></li>
+                    <li><span>Resource & Time Management</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="hobbies">
+                <ul class="mine">
+                    <li><span>Chess</span></li>
+                    <li><span>Rubik's Cubing</span></li>
+                    <li><span>Travelling</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Skills -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+                <div class="skcon">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I am a competent in building responsive web page.</p>
+                    <ul>
+                    <li>Hyper Text Markup Language</li>
+                    <li>CSS - Cascading Style Sheets</li>
+                    <li>JS - Javascript</li>
+                    </ul>
+                </div>
+                <div class="skcon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Programming Languages</h2>
+                    <p>I am a competent in programming, with a solid foundation and eager to learn more.</p>
+                    <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    </ul>
+                </div>
+                <div class="skcon">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database and Cloud</h2>
+                    <p>I am a competent in both SQL and NoSQL languages.</p>
+                    <ul>
+                    <li>Oracle SQL</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Certifications -->
+    <div id="certifications">
+        <div class="container">
+            <h1 class="sub-title">My Certifications</h1>
+            <div>
+                <ul class="certCon">
+                    <li class="ccon"><i class="fa-brands fa-java"></i><br><span>FIIT Certified Software Professional</span><br><br>Core Java & Advanced Java <br>FIIT FORMACION PVT LTD <br>Issued Jan 2023</li>
+                    <li class="ccon"><i class="fa-solid fa-cloud"></i><br><span>Oracle Certified Foundations Associate</span><br><br>Oracle Cloud Infrastructure 2023 <br>Oracle <br>Issued March 2023 - Expires March 2026</li>                   
+                    <li class="ccon"><i class="fa-brands fa-envira"></i><br><span>MongoDB Certified DBA Associate</span><br><br>NoSQL - MongoDB <br>MongoDB <br>Issued October 2024</li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>amirthavarshan.s1506@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+91 9962737309</p>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwwpwrLSU1ZDhaSfpUyG99lNPjC0nb94XUnv2o2MyuXRl2JkTj0GbTtuY0SsSJKXmjq/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
