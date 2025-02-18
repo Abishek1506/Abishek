@@ -362,6 +362,9 @@ nav .fa-solid{
 
 /* css for asmall screen */
 @media only screen and (max-width: 600px){
+    #header{
+        width:100%;
+    }
     .header-text{
         margin-top: 40%;
         font-size: 16px;
