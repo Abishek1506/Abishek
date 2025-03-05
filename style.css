@@ -11,14 +11,133 @@ body{
     background: rgb(0, 2, 20);
     color: white;
 }
+
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(erasebg2.png);
-    background-size: cover;
-    background-position: center;
+    background-image: url(erasebg3.png);
+    background-size: contain; 
+    background-position: right bottom; 
+    background-repeat: no-repeat; 
+    
+}
+.container{
+    margin-top: 40px;
+    margin-left: 30px;
+    animation: colorChange 4s linear infinite ;
+}
+@keyframes colorChange {
+    0%, 100% {
+        filter: hue-rotate(270deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes animate{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    } 
+}
+.cube{
+    position: relative;
+    width: 80px;
+    height: 20px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+.cube .box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(21, 21, 25, 1), rgba(255, 6, 6, 1));
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(40px);
+}
+   
+.top{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: #222;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 6, 6, 1);
+}
+.top span {
+    position: absolute ;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 0 0 50px rgba(255, 6, 6, 0.25),
+                 0 0 100px rgba(255, 6, 6, 0.5),
+                 0 0 200px rgba(255, 6, 6, 0.75),
+                 0 0 300px rgba(255, 6, 6, 1);
+}
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 6, 6, 1);
+    transform: translateZ(-40px);
+    opacity: 0.75;
+    box-shadow: 0 0 120px rgba(255, 6, 6, 0.2),
+    0 0 200px rgba(255, 6, 6, 0.4),
+    0 0 300px rgba(255, 6, 6, 0.6),
+    0 0 400px rgba(255, 6, 6, 0.8),
+    0 0 500px rgba(255, 6, 6, 1),
 }
 
+
+.mobile-image {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #header {
+        background: none; 
+    }
+    
+    .mobile-image {
+        
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px; 
+        height: 300px;
+        border-radius: 60%;
+        overflow: hidden;
+        border: 5px solid black; 
+    }
+
+    .mobile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 .container{
     padding: 10px 20px;
 
@@ -29,63 +148,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.main-container{
-            padding: 50px;
-            width: 50px;
-            height: 50px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .circle{
-            width: 100%;
-            height: 100%;
-            border: 5px solid;
-            border-radius:50% ;
-            position: absolute;
-        }
-
-        .one{
-            border-color: purple;
-            animation: animate01 5s ease-in infinite;
-        }
-        .two{
-            border-color: red;
-            animation: animate02 5s ease-in-out infinite;
-            animation-delay: 0.5s;
-        }
-        .three{
-            border-color: blue;
-            animation: animate03 5s ease-out infinite;
-            animation-delay: 1s;
-        }
-        .four{
-            border-color: #2dd9fe;
-            animation: animate04 5s linear infinite;
-            animation-delay: 1.5s;
-        }
-        @keyframes animate01{
-            0%{ rotate: 0deg; width: 100%; }
-            50%{ width: 40%; rotate: 190deg; }
-            100%{ rotate: 750deg; width: 100%; }
-        }
-        @keyframes animate02{
-            0%{ rotate: 30deg; width: 100%; }
-            50%{ width: 50%; rotate: 200deg; }
-            100%{ rotate: 770deg; width: 100%; }
-        }
-        @keyframes animate03{
-            0%{ rotate: 60deg; width: 100%; }
-            50%{ width: 60%; rotate: 210deg; }
-            100%{ rotate: 790deg; width: 100%; }
-        }
-        @keyframes animate04{
-            0%{ rotate: 90deg; width: 100%; }
-            50%{ width: 70%; rotate: 220deg; }
-            100%{ rotate: 810deg; width: 100%; }
-        }
 
 nav ul li{
     display: inline-block;
@@ -320,7 +383,7 @@ nav ul li a:hover::after{
     font-size: 25px;
 }
 .social-icons{
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 30px;
 }
 .social-icons a{
@@ -363,21 +426,28 @@ nav .fa-solid{
 /* css for asmall screen */
 @media only screen and (max-width: 600px){
     #header{
-        width:100%;
+        height: 100vh;
     }
     .header-text{
-        margin-top: 40%;
+        display: grid;
+        margin-top: 65%;
         font-size: 18px;
     }
     .header-text h1{
         font-size: 50px;
+    }
+    .header-text p{
+        margin-top: 20px;
+        max-width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .sphide{
         display: none;
     }
     .header-text .social-icons{
-        margin-top: 20%;
+        margin-top: 5%;
     }
     nav .fa-solid{
         display: block;
